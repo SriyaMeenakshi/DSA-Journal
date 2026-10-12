@@ -3,7 +3,7 @@ Given an integer array nums of size n. Return all elements which appear more tha
 The output can be returned in any order.
 """
 
-def majorityElementTwo(self, nums):
+def majorityElementTwo(nums)->list:
     n=len(nums)
     ele1=-1
     ele2=-1
@@ -33,14 +33,9 @@ def majorityElementTwo(self, nums):
         res.append(ele1)
     if cnt2>n//3 and ele1!=ele2:
         res.append(ele2)
-    
-
-
-
-
-
-
-
+    if len(res)>2 and res[0]>res[1]:
+        res[0],res[1]=res[1],res[0]
+    return res
 
 if __name__ == "__main__":
     arr = [1, 2, 1, 1, 3, 2]
