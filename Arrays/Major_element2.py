@@ -2,7 +2,7 @@
 Given an integer array nums of size n. Return all elements which appear more than n/3 times in the array. 
 The output can be returned in any order.
 """
-
+#Booye Moyer's Algorithm
 def majorityElementTwo(nums)->list:
     n=len(nums)
     ele1=-1
